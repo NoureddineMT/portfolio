@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+
+			{% block importmap %}
+				{{ importmap('app') }}
+			{% endblock %}
+		{% endblock %}
+	</head>
     <body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg bg-invisible ">
+            <div class="container">
+                <a class="wlogoImg" href="#"><img class="w-25" src="img/png/logo-no-background.png"></a>
+                <button class="navbar-toggler bg-purple" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item p-1">
+                            <a class="nav-link hover font-lg ps-1" href="#about">About</a>
+                        </li>
+                        <li class="nav-item p-1">
+                            <a class="nav-link hover font-lg ps-1" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item p-1">
+                            <a class="nav-link hover font-lg ps-1" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="bg-purple w-25 rounded-pill d-flex justify-content-around">
+                        <ul class="list-style-none row m-0 p-2">
+                            <li id="sun" class="col-6 d-none">
+                                <i class="fa-solid fa-sun" style="color: #ffffff;"></i>
+                            </li>
+                            <li id="moon" class="col-6">
+                                <i class="fa-solid fa-moon" style="color: #ffffff;"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
         {% block body %}{% endblock %}
     </body>
 </html>

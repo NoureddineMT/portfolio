@@ -1,0 +1,292 @@
+@import '~bootstrap/scss/bootstrap';
+
+* {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.list-style-none {
+    list-style: none;
+}
+
+.h2-purple {
+    font-size: 3rem;
+    color: #676cdb;
+}
+
+.h2-white {
+    font-size: 3rem;
+    color: white;
+}
+
+.h2-darkgrey {
+    text-decoration: none;
+    font-size: 3rem;
+    color: #212025;
+    font-weight: 900;
+}
+
+.h3-purple {
+    font-size: 2.5rem;
+    color: #676cdb;
+}
+
+.h3-white {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.h3-darkgrey {
+    font-size: 2.5rem;
+    color: #212025;
+}
+.h4-purple{
+    font-size: 1.5rem;
+    color: #676cdb;
+}
+.h5-darkgrey {
+    font-size: 1rem;
+    color: #212025;
+}
+.h-page {
+    min-height: 57rem;
+}
+.title-potfolio {
+    font-size: 4rem;
+    color: #00000000;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+
+}
+
+/* * NavBar */
+.hover {
+    color: white;
+}
+
+.hover:hover {
+    color: #676cdb;
+}
+
+.hover2 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hover2 i:hover {
+    color: black;
+    transform: scale(1.5);
+}
+
+.top-sticky {
+    position: sticky;
+    top: 0;
+}
+.wlogoImg{
+    width: 40%;
+}
+/* * first section */
+.name {
+    font-size: 4rem;
+}
+
+.job {
+    font-size: 3rem;
+}
+
+.job1 {
+    font-size: 3rem;
+    position: relative;
+    animation: mymove 5s infinite;
+}
+
+.avatar:hover {
+    transform: scale(1.5);
+}
+
+.logo img {
+    width: 45%;
+}
+
+@keyframes changeColor {
+    0% {
+        color: #676cdb;
+    }
+
+    50% {
+        color: white;
+    }
+
+    100% {
+        color: #676cdb;
+    }
+}
+
+@keyframes changeColor2 {
+    0% {
+        color: #676cdb;
+    }
+
+    50% {
+        color: #212025;
+    }
+
+    100% {
+        color: #676cdb;
+    }
+}
+
+@keyframes changeColor3 {
+    0% {
+        color: #212025;
+    }
+
+    50% {
+        color: #676cdb;
+    }
+
+    100% {
+        color: #212121;
+    }
+}
+@keyframes changeColor4 {
+    0% {
+        color: #676cdb;
+    }
+
+    50% {
+        color: #ffffff;
+    }
+
+    100% {
+        color: #676cdb;
+    }
+}
+
+@keyframes changeColor5 {
+    0% {
+        color: #ffffff;
+    }
+
+    50% {
+        color: #676cdb;
+    }
+
+    100% {
+        color: #ffffff;
+    }
+}
+
+.color-change {
+    animation: changeColor 2s infinite;
+}
+
+.color-change2 {
+    animation: changeColor2 3s infinite;
+}
+
+.color-change3 {
+    animation: changeColor3 3s infinite;
+}
+.color-change4 {
+    animation: changeColor4 3s infinite;
+}
+
+.color-change5 {
+    animation: changeColor5 3s infinite;
+}
+
+@keyframes mymove {
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: 50px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+/* * second section */
+.bg-img {
+    background-image: url(./img/png/spacr.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.shadow-card {
+    box-shadow: 0px 0px 18px 10px rgba(0,0,0,0.34);
+    -webkit-box-shadow: 0px 0px 18px 10px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 0px 18px 10px rgba(0,0,0,0.34);
+}
+.bg-semipurple {
+    background-color: rgba(103, 109, 219, 0.3)
+}
+
+/* * text */
+.font-lg {
+    font-size: larger;
+}
+
+/* * background */
+.bg-darkgrey {
+    background-color: #212025;
+}
+
+.bg-purple {
+    background-color: #676cdb;
+}
+.bg-invisible{
+    background-color: #00000000;
+}
+.bg-white {
+    background-color: white;
+}
+
+/* * width */
+.w-10 {
+    width: 10%;
+}
+
+/* * button */
+.btn-purple {
+    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #676cdb;
+    color: white;
+    text-align: center;
+}
+
+.btn-purple:hover {
+    background-color: #212025;
+    border: 1px solid #676cdb;
+}
+
+/* * text */
+.text-white {
+    color: white;
+}
+
+.text-purple {
+    color: #676cdb;
+}
+
+.text-darkgrey {
+    color: #212025;
+}
+
+.btn-white {
+    background-color: white;
+    color: #212025;
+}
+
