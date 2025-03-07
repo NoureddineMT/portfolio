@@ -89,8 +89,8 @@
 						<h3 class="h3-purple mt-3 mt-lg-1">About me</h3>
 						<p class="text-darkgrey d-flex align-items-center text-center text-lg-start pt-2">
 							Je suis Noureddine MOUATAMID, un jeune de 24 ans passionné par le monde de la technologie et du développement professionnel. Actuellement, je réside dans la magnifique ville de Cannes, où je suis engagé dans un parcours de formation professionnelle à l'AFPA. Mon objectif est d'obtenir un diplôme professionnel de niveau bac +2.
-																																																								
-																																																					Depuis mon plus jeune âge, j'ai développé un intérêt profond pour la technologie et la façon dont elle peut transformer notre mode de vie et de travail. Ma formation actuelle me donne l'opportunité d'acquérir des compétences avancées et des connaissances spécialisées qui me prépareront aux défis et aux opportunités futures dans le domaine que j'aime.
+																																																															
+																																																												Depuis mon plus jeune âge, j'ai développé un intérêt profond pour la technologie et la façon dont elle peut transformer notre mode de vie et de travail. Ma formation actuelle me donne l'opportunité d'acquérir des compétences avancées et des connaissances spécialisées qui me prépareront aux défis et aux opportunités futures dans le domaine que j'aime.
 						</p>
 					</div>
 				</div>
@@ -98,28 +98,33 @@
 		</section>
 		<section class="d-flex align-items-center justify-content-center bg-img h-page" id="portfolio">
 
-		<div class="row">
-		{% for project in projects %}
-			<div class="col-md-3">
-				<div class="card bg-white" style="width: 18rem;">
-				<img src="img/png/{{ project.picture }}" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title text-darkgrey">{{ project.title }}</h5>
-						<p class="card-text text-darkgrey">{{ project.description }}</p>
-						<a href="{{ project.link }}" class="btn btn-purple">Go somewhere</a>
+			<div class="row">
+				{% for project in projects %}
+					<div class="col-md-3">
+						<div class="card" style="width: 18rem;">
+							<img src="img/png/{{ project.picture }}" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h4 class="card-title">{{ project.title }}</h4>
+								<p class="card-text">{{ project.description }}</p>
+								<a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary mr-2">
+									<i class="fas fa-link"></i>
+									Visit Site
+								</a>
+								<a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+									<i class="fab fa-github"></i>
+									Github
+								</a>
+							</div>
+						</div>
 					</div>
-				</div>
+				{% endfor %}
 			</div>
-		{% endfor %}
-		</div>
 
 		</section>
 		<section class="d-flex align-items-cente justify-content-center bg-white h-page pt-3 " id="contact">
 			<div class="d-flex flex-column align-items-center justify-content-center">
 				<div class="row justify-content-center">
-					<div
-						class="row col-md-12">
-						{# Messaggi di successo o errore #}
+					<div class="row col-md-12">
 						{% for message in app.flashes('success') %}
 							<div class="alert alert-success">
 								{{ message }}
@@ -134,13 +139,11 @@
 					</div>
 				</div>
 
-				{# Nascondi il form se il messaggio è stato inviato con successo #}
 				<div class="row justify-content-center">
-				<h2 class="h2-purple text-center p-3">Contact
-				</h2>
+					<h2 class="h2-purple text-center p-3">Contact
+					</h2>
 					<div class="row col-md-8">
 						{{ form_start(contactForm, { 'attr': {'class': 'row', 'novalidate': 'novalidate'} }) }}
-						{# Aggiungi qui i campi del form #}
 						{{ form_end(contactForm) }}
 					</div>
 				</div>

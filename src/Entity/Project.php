@@ -26,6 +26,9 @@ class Project
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $link = null;
 
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $github = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +78,18 @@ class Project
     public function setLink(?string $link): static
     {
         $this->link = $link;
+
+        return $this;
+    }
+
+    public function getGithub(): ?string
+    {
+        return $this->github;
+    }
+
+    public function setGithub(?string $github): static
+    {
+        $this->github = $github;
 
         return $this;
     }
